@@ -1,15 +1,10 @@
 from algemene_functies import mijn_functie_2
 
-def aanbieding_1():
-    prijzen = {
-        "smaak": "aardbei",
-        "prijs": 4,
-        "korting": 0.1
-    }
-    aanbieding = prijzen["prijs"] * (1 - prijzen["korting"])
-    aanbieding_str = f"{aanbieding:.2f}".replace('.', ',')
-    return f"Vandaag in de aanbieding: emmertje ijs (1 liter) in de smaak {prijzen['smaak']}, van {prijzen['prijs']} euro voor {aanbieding_str} euro"
-print(aanbieding_1())
+def aanbieding_1(smaak, prijs, korting):
+    prijs_na_koring = prijs * (1 - korting)
+    uitvoer = f"Vandaag in de aanbieding: emmertje ijs (1 liter) in de smaak {smaak}, van {prijs} euro voor {prijs_na_koring:.2f} euro"
+    return uitvoer
+print(aanbieding_1("aardbei", 4, 0.1))
 
 
 
